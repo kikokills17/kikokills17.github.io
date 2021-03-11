@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 3.6rem;
+  font-family: Neutral Face, Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+html {
+  font-size: 62.5%;
+  background-color: #f2f2f2;
+}
+
+ul,li,ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.wrapper {
+  padding: 2rem;
+}
+.wrapper>header,
+.nav-box>header {
+  overflow: hidden;
+  height: 6rem;
+  line-height: 6rem;
+}
+
+/* mark */
+.wrapper>header .mark,
+.nav-box>header .mark {
+  position: relative;
+  width: 2rem;
+  height: 100%;
+  transition: all 0.1s linear;
+}
+/* .wrapper>header .mark:hover,
+.nav-box>header .mark:hover {
+  transform: rotate(45deg);
+} */
+
+.wrapper>header .mark::before,
+.wrapper>header .mark::after,
+.nav-box>header .mark::before,
+.nav-box>header .mark::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 1.2rem;
+  background-color: #000;
+  transform-origin: 0 0;
+  cursor: pointer;
+}
+/* - */
+.wrapper>header .mark::before,
+.nav-box>header .mark::before {
+  left: 0;
+  top: 50%;
+  transform: scale(.5) translateY(-50%);
+}
+/* | */
+.wrapper>header .mark::after,
+.nav-box>header .mark::after {
+  top: 50%;
+  left: 50%;
+  transform: scale(.5) rotate(90deg) translate(-50%, -50%);
+}
+/* mark end */
+
+/* intro */
+.wrapper>.intro {
+  text-align: center;
+  line-height: 3.8rem;
+}
+/* intro end */
+
+/* shape */
+.wrapper>.shapes {
+  position: relative;
+  height: calc(100vh - 33rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-top: 7rem;
+  /* background-color: orange; */
+}
+.shapes>.shape {
+  position: absolute;
+  width: 13rem;
+  height: 7.8rem;
+  line-height: 7.8rem;
+  font-size: 2.8rem!important;
+  text-align: center;
+  background-color: #75FA55;
+  transform-origin: 0 0;
+}
+.shapes>.circle {
+  width: 13rem;
+  height: 13rem;
+  line-height: 13rem;
+  border-radius: 50%;
+}
+.shapes>.shape1 {
+  top: 0;
+  left: 30%;
+}
+.shapes>.shape2 {
+  top: -4rem;
+  right: 2rem;
+}
+.shapes>.shape3 {
+  top: 7rem;
+  left: 2rem;
+}
+.shapes>.shape4 {
+  width: 24rem;
+  height: 10.5rem;
+  line-height: 10.5rem;
+  top: 10rem;
+  right: 2rem;
+  transform: rotate(-2deg);
+}
+.shapes>.shape5 {
+  width: 30rem;
+  height: 10rem;
+  line-height: 10rem;
+  top: 21rem;
+  right: 4rem;
+  transform: rotate(4deg);
+}
+.shapes>.shape6 {
+  width: 25.5rem;
+  height: 9.6rem;
+  line-height: 9.6rem;
+  top: 35rem;
+  left: 1rem;
+  transform: rotate(-4deg);
+}
+.shapes>.shape7 {
+  width: 11rem;
+  height: 11rem;
+  line-height: 11rem;
+  top: 34rem;
+  right: 3rem;
+}
+.shapes>.shape8 {
+  width: 35rem;
+  height: 10rem;
+  line-height: 10rem;
+  top: 47rem;
+  left: 2rem;
+  transform: rotate(-3deg);
+}
+/* shape end */
+
+/* nav-box */
+.nav-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #f2f2f2;
+}
+.nav-box.active {
+  display: block!important;
+}
+.nav-box>.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 6rem);
+  text-align: center;
+}
+.nav-box>.nav li {
+  margin-bottom: 10rem;
+}
+/* nav-box end */
+
+/* page about */
+.wrapper>header .title {
+  float: left;
+  font-size: 4.8rem;
+  line-height: 6rem;
+}
+
+.intro-detail {
+  margin-top: 20rem;
+  line-height: 6rem;
+}
+.intro-detail>.about-shapes {
+  display: none;
+}
+.highlight {
+  color: #2BDE00!important;
+}
+
+/* page contact */
+.contact {
+  margin-top: 16.5rem;
+  font-size: 3.6rem;
+  line-height: 6rem;
+}
+.contact-shapes {
+  display: none;
+}
+
+/* page work */
+.work {
+  margin-top: 16.5rem;
+  font-size: 3.6rem;
+  line-height: 6rem;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+}
